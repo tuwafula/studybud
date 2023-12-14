@@ -4,8 +4,13 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.contrib.auth import authenticate, login, logout
-from .models import Room, Topic, Message, User
+from .models import Room, Topic, Message
 from .forms import RoomForm, UserForm, MyUserCreationForm
+
+from django.contrib.auth import get_user_model
+
+User = get_user_model()
+
 
 # Create your views here.
 
